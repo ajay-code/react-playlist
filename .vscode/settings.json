@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "**/**/*.js": "javascriptreact"
+    },
+    "editor.fontFamily": "'Operator Mono',Menlo, Monaco, 'Courier New', monospace",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 30,
+    "phpformatter.composer": true,
+    "materialTheme.cache.workbench.settings": {
+        "themeColours": "Palenight",
+        "accent": "Cyan"
+    }
+}

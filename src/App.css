@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+}
+
+
+body {
+  background-color: #222;
+  padding: 20px;
+}
+
+
+
