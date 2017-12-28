@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Aggrigate extends Component {
+class PlayListCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -14,20 +14,20 @@ class Aggrigate extends Component {
     };
     return (
       <div style={{ ...style, color: this.props.color }}>
-        {this.props.playlists && this.props.playlists.length}
-        &nbsp; TEXT
+        {this.props.playlists.length}
+        &nbsp; PlayLists
       </div>
     );
   }
 }
 
-Aggrigate.propTypes = {
+PlayListCounter.propTypes = {
   color: PropTypes.string,
-  playlists: PropTypes.arrayOf(PropTypes.string),
+  playlists: PropTypes.arrayOf(PropTypes.object),
 };
-Aggrigate.defaultProps = {
+PlayListCounter.defaultProps = {
   color: '#fff',
-  playlists: null,
+  playlists: [],
 };
 
-export default Aggrigate;
+export default PlayListCounter;

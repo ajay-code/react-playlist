@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Filter from './components/Filter';
-import Aggrigate from './components/Aggrigate';
-import { PlayList } from './components/PlayList';
+import PlayListCounter from './components/PlayListCounter';
+import HoursCounter from './components/HoursCounter';
+import PlayList from './components/PlayList';
 import FakeServerData from './fakeServerData';
 
 const defaultColor = '#fff';
@@ -27,9 +28,11 @@ class App extends Component {
             <h1 style={{ color: defaultColor }}>
               {this.state.serverData.user.name} &apos; PlayList
             </h1>
-            <Aggrigate color={defaultColor} playlists={this.state.serverData.user.playlists} />
-            <Aggrigate color={defaultColor} />
-
+            <PlayListCounter
+              color={defaultColor}
+              playlists={this.state.serverData.user.playlists}
+            />
+            <HoursCounter color={defaultColor} playlists={this.state.serverData.user.playlists} />
             <Filter color={defaultColor} />
             <PlayList color={defaultColor} />
             <PlayList color={defaultColor} />
@@ -37,7 +40,7 @@ class App extends Component {
             <PlayList color={defaultColor} />
           </div>
         ) : (
-          'Loading...'
+          <h1 style={{ color: defaultColor }}>Loading...</h1>
         )}
       </div>
     );

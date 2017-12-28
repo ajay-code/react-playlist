@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class PlayList extends Component {
+class PlayList extends Component {
   constructor(props) {
     super(props);
     this.state = {};

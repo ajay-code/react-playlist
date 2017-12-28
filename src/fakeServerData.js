@@ -4,15 +4,27 @@ export default {
     playlists: [
       {
         name: 'my fav',
-        songs: ['I Am Thine, O Lord!', 'Glory To Thee', 'No Blood, No Altar Now'],
+        songs: [
+          { name: 'I Am Thine, O Lord!', duration: 50000 },
+          { name: 'Glory To Thee', duration: 40000 },
+          { name: 'No Blood, No Altar Now', duration: 70000 },
+        ],
       },
       {
         name: 'Second list',
-        songs: ['I Am Thine, O Lord!', 'Glory To Thee', 'No Blood, No Altar Now'],
+        songs: [
+          { name: 'I Am Thine, O Lord!', duration: 50000 },
+          { name: 'Glory To Thee', duration: 40000 },
+          { name: 'No Blood, No Altar Now', duration: 70000 },
+        ],
       },
       {
         name: 'Third list',
-        songs: ['I Am Thine, O Lord!', 'Glory To Thee', 'No Blood, No Altar Now'],
+        songs: [
+          { name: 'I Am Thine, O Lord!', duration: 50000 },
+          { name: 'Glory To Thee', duration: 40000 },
+          { name: 'No Blood, No Altar Now', duration: 70000 },
+        ],
       },
     ],
   },
