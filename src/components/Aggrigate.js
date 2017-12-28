@@ -12,15 +12,22 @@ class Aggrigate extends Component {
       width: '40%',
       display: 'inline-block',
     };
-    return <div style={{ ...style, color: this.props.color }}>Number Text</div>;
+    return (
+      <div style={{ ...style, color: this.props.color }}>
+        {this.props.playlists && this.props.playlists.length}
+        &nbsp; TEXT
+      </div>
+    );
   }
 }
 
 Aggrigate.propTypes = {
   color: PropTypes.string,
+  playlists: PropTypes.arrayOf(PropTypes.string),
 };
 Aggrigate.defaultProps = {
   color: '#fff',
+  playlists: null,
 };
 
 export default Aggrigate;
