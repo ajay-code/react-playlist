@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/core-modules": ["react", "prop-types"]
+  },
+  "extends": "airbnb",
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ]
+  }
+}
