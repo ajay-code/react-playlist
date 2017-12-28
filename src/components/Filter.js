@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Filter extends Component {
   constructor(props) {
@@ -6,11 +7,7 @@ class Filter extends Component {
     this.state = {};
   }
   render() {
-    const style = {
-      // color: this.props.color,
-      // width: '40%',
-      // display: 'inline-block'
-    };
+    const style = {};
     return (
       <div style={{ ...style, color: this.props.color }}>
         <input type="text" />
@@ -19,6 +16,9 @@ class Filter extends Component {
   }
 }
 
+Filter.propTypes = {
+  color: PropTypes.string,
+};
 Filter.defaultProps = {
   color: '#fff',
 };
