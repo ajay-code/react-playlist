@@ -34,10 +34,7 @@ class App extends Component {
             />
             <HoursCounter color={defaultColor} playlists={this.state.serverData.user.playlists} />
             <Filter color={defaultColor} />
-            <PlayList color={defaultColor} />
-            <PlayList color={defaultColor} />
-            <PlayList color={defaultColor} />
-            <PlayList color={defaultColor} />
+            {this.state.serverData.user.playlists.map(playlist => <PlayList playlist={playlist} />)}
           </div>
         ) : (
           <h1 style={{ color: defaultColor }}>Loading...</h1>
