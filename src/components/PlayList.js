@@ -17,7 +17,9 @@ class PlayList extends Component {
     return (
       <div style={{ ...style }}>
         <h3>{name}</h3>
-        <ul style={{ padding: '20px' }}>{songs.map(song => <li>{song.name}</li>)}</ul>
+        <ul style={{ padding: '15px' }}>
+          {songs.map(song => <li key={song.name}>{song.name}</li>)}
+        </ul>
       </div>
     );
   }

@@ -10,7 +10,7 @@ class Filter extends Component {
     const style = {};
     return (
       <div style={{ ...style, color: this.props.color }}>
-        <input type="text" />
+        <input onKeyUp={event => this.props.onTextChange(event.target.value)} type="text" />
       </div>
     );
   }
@@ -18,6 +18,7 @@ class Filter extends Component {
 
 Filter.propTypes = {
   color: PropTypes.string,
+  onTextChange: PropTypes.func.isRequired,
 };
 Filter.defaultProps = {
   color: '#fff',

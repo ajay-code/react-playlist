@@ -11,7 +11,7 @@ export default {
         ],
       },
       {
-        name: 'Second list',
+        name: 'Discover weekly',
         songs: [
           { name: 'I Am Thine, O Lord!', duration: 50000 },
           { name: 'Glory To Thee', duration: 40000 },
@@ -19,7 +19,7 @@ export default {
         ],
       },
       {
-        name: 'Third list',
+        name: 'Another playlist',
         songs: [
           { name: 'I Am Thine, O Lord!', duration: 50000 },
           { name: 'Glory To Thee', duration: 40000 },
@@ -27,7 +27,7 @@ export default {
         ],
       },
       {
-        name: 'Fourth list',
+        name: 'Playlist yeah!',
         songs: [
           { name: 'I Am Thine, O Lord!', duration: 50000 },
           { name: 'Glory To Thee', duration: 40000 },

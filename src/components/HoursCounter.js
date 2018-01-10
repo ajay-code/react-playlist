@@ -28,7 +28,13 @@ class HoursCounter extends Component {
 
 HoursCounter.propTypes = {
   color: PropTypes.string,
-  playlists: PropTypes.arrayOf(PropTypes.string),
+  playlists: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    songs: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      duration: PropTypes.number,
+    })),
+  })),
 };
 HoursCounter.defaultProps = {
   color: '#fff',

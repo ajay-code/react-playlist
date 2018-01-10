@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Filter from './components/Filter';
-import PlayListCounter from './components/PlayListCounter';
-import HoursCounter from './components/HoursCounter';
 import PlayList from './components/PlayList';
 import FakeServerData from './fakeServerData';
+import HoursCounter from './components/HoursCounter';
+import PlayListCounter from './components/PlayListCounter';
 
 const defaultColor = '#fff';
 
@@ -13,6 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       serverData: {},
+      filterString: '',
     };
   }
   componentDidMount() {
@@ -33,8 +34,14 @@ class App extends Component {
               playlists={this.state.serverData.user.playlists}
             />
             <HoursCounter color={defaultColor} playlists={this.state.serverData.user.playlists} />
-            <Filter color={defaultColor} />
-            {this.state.serverData.user.playlists.map(playlist => <PlayList playlist={playlist} />)}
+            <Filter
+              onTextChange={text => this.setState({ filterString: text })}
+              color={defaultColor}
+            />
+            {this.state.serverData.user.playlists
+              .filter(playlist =>
+                playlist.name.toLowerCase().includes(this.state.filterString.toLowerCase()))
+              .map(playlist => <PlayList key={playlist.name} playlist={playlist} />)}
           </div>
         ) : (
           <h1 style={{ color: defaultColor }}>Loading...</h1>
